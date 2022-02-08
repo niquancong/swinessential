@@ -12,7 +12,7 @@ problem_files = glob.glob("..\images\*@.*")
 
 # fix name
 for f in problem_files:
-    temp = f.find('.')
+    temp = f.rfind('.')
     os.replace(f, f[0:temp - 1] + f[temp:])
 
 # move to osu skin dir
